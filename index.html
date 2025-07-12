@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medieval vs Modern Medicine</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(to right, #0f5132, #198754);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      animation: floatText 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    @keyframes floatText {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #7fff00, 0 0 15px #39ff14;
+      }
+      50% {
+        text-shadow: 0 0 10px #bfff00, 0 0 20px #32cd32, 0 0 30px #00ff00;
+      }
+      100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #7fff00, 0 0 15px #39ff14;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .section {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      animation: slideIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    .section:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+    .section:nth-child(2) {
+      animation-delay: 0.6s;
+    }
+    .section:nth-child(3) {
+      animation-delay: 0.9s;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      #delayedImage {
+  display: block;
+  margin: 2rem auto;
+  max-width: 300px;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+/* JavaScript will add this class after 30s */
+.fade-in {
+  opacity: 1;
+}
+
+    }
+
+    h2 {
+      color: #146c43;
+      border-bottom: 2px solid #198754;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+    
+    .link-button {
+  display: inline-block;
+  background-color: #198754;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: #146c43;
+}
+
+    p {
+       font-family: verdana;
+       font-size: 20px;
+       color: #B0E0E6;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Medieval vs Modern Medicine</h1>
+    <p>Made by Mustafa Yasir, Kiaan Khera, Marcus Han and Markus Wong</p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>Medieval Medicine</h2>
+      <ul>
+        <li>Based on the theory of the four humours</li>
+        <li>Most people went to religion for hope and as because people thought the black death was a punishment from God</li>
+        <li>Used herbal remedies and bloodletting</li>
+        <li>Low hygiene, frequent diseases so people tried to avoid bad smells</li>
+        <li>Limited understanding of human body or germs</li>
+      </ul>
+    </div>
+   
+
+   <img src="https://th.bing.com/th/id/OIP.5ijHyGnRLbTqzIVIbYYHwwHaEr?w=299&h=187&c=7&r=0&o=7&dpr=1.4&pid=1.7&rm=3     id="delayedImage">
+
+    <div class="section">
+      <h2>Modern Medicine</h2>
+      <ul>
+        <li>Scientific research and know well about cures for the human body</li>
+        <li>Advanced diagnostics and treatments like MRI and X-ray</li>
+        <li>Use of vaccines, antibiotics, and surgeries help to fight bacteria</li>
+        <li>Good hygiene, prevention of bacteria and medicine</li>
+        <li>Healthcare systems and many hospitals</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Key Differences</h2>
+      <ul>
+        <li><strong>Prevention:</strong> Religion vs. Science</li>
+        <li><strong>Treatment:</strong> Herbal vs. Antibiotics</li>
+        <li><strong>Hygiene:</strong> Poor vs. Rich</li>
+        <li><strong>Life Expectancy:</strong> 30s-40s vs. 70s-80s</li>
+        <li><strong>Tools:</strong> Scissors vs. X-ray</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script>
+  window.onload = function () {
+    setTimeout(() => {
+      document.getElementById("delayedImage").classList.add("fade-in");
+    }, 30000); // 30,000 ms = 30 seconds
+  };
+</script>
+</body>
+ <!-- Image to Fade In -->
+<img src="https://th.bing.com/th/id/OIP.ANAA9Wu39LEBbAK2B0v9KQHaE7?w=248&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" 
+     alt="Modern" 
+     id="delayedImage">
+
+<!-- Script for Fade In -->
+<script>
+  window.onload = function () {
+    setTimeout(() => {
+      document.getElementById("delayedImage").classList.add("fade-in");
+    }, 30000); // 30 seconds
+  };
+</script>
+ <div style="text-align: center; margin-top: 2rem;">
+  <a href="file:///C:/Mustafa/computer/Glitch%20-%2060125/medicine_comparison2.html" class="link-button">Go to Modern Medicine Details</a>
+</div>
+</html>
+ 
